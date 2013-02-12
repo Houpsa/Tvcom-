@@ -72,7 +72,7 @@ void MainWindow::showExpanded()
 void MainWindow::initialiserLesBoutons()
 {
     qDebug("initialiserLesBoutons()");
-    code = QString("4837013");
+    code = QString("4837xxx");
 
     ui->pushButton_1->setProperty("key", "1");
     connect(ui->pushButton_1, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
@@ -123,13 +123,13 @@ void MainWindow::onButtonClicked()
     {
         pageWeb = new QWebView;
         pageWeb->load(QUrl(QString("http://hd1.freebox.fr/pub/remote_control?key=%1&code=%2&long=true").arg(key).arg(code)));
-        qDebug("onButtonClicked utilisé");
+        qDebug("onButtonClicked utilisï¿½");
     }
     else
     {
     pageWeb = new QWebView;
     pageWeb->load(QUrl(QString("http://hd1.freebox.fr/pub/remote_control?key=%1&code=%2").arg(key).arg(code)));
-    qDebug("onButtonClicked utilisé");
+    qDebug("onButtonClicked utilisï¿½");
     }
 }
 
